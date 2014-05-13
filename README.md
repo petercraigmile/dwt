@@ -9,12 +9,39 @@ To install the R package make sure that you have the `devtools` R package instal
 devtools::install_github("dwt", user="petercraigmile", subdir="dwt") 
 ```
 
-The R code contains functions to carry out the wavelet transforms in R and in R with C (to speed up the calculations).  I need to check the two versions of the MODWT code.
+The R code contains functions to carry out the wavelet transforms in R and in R with C (to speed up the calculations).
+
 
 The R package is contained in the `dwt` folder.
 
-The documentation for this R package needs more work.
 
+
+
+### Installation
+
+For Mac OS and Linux, make sure you have the C and fortran compilers
+installed.  After installing the `devtools` R package type
+
+```
+devtools::install_github("dwt", user="petercraigmile", subdir="dwt") 
+```
+
+For windows, download the file <a href="https://github.com/petercraigmile/dwt/raw/master/releases/current/dwt.zip">dwt.zip</a> from the `releases` folder.    Then:
+
+1. Open the R gui, by doubling clicking on the R icon.
+
+2. Click on the `Packages` menu and select `Install package(s) from local zip files...`.  Find the zip file and press `Open`.
+
+3. Your R package will be installed.
+
+
+After installation, type `library(dwt)` to use the R library.
+
+### Issues
+
+1. I need to check the two versions of the MODWT code.
+
+2. The documentation for this R package needs more work.
 
 
 ### References:
