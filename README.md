@@ -26,7 +26,7 @@ installed.  After installing the `devtools` R package type
 devtools::install_github("dwt", user="petercraigmile", subdir="dwt") 
 ```
 
-For windows, download the file <a href="https://github.com/petercraigmile/dwt/raw/master/releases/current/dwt.zip">dwt.zip</a> from the `releases` folder.    Then:
+For windows, download the file <a href="https://github.com/petercraigmile/dwt/raw/master/releases/0.9/dwt_0.9.zip">dwt_0.9.zip</a> from the `releases` folder.    Then:
 
 1. Open the R gui, by doubling clicking on the R icon.
 
