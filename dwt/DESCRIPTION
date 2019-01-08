@@ -1,10 +1,10 @@
 Package: dwt
-Version: 0.9
-Date: 2014-04-30
+Version: 1.0
+Date: 2019-01-08
 Title: R routines for carrying out the Discrete Wavelet Transforms (DWT) and Maximum Overlap Discrete Wavelet Transforms (MODWT) for univariate time series.
 Author: Peter F. Craigmile
 Maintainer: Peter F. Craigmile <pfc@stat.osu.edu>
 Depends: R (>= 2.8)
 Description: DWT R code
 License: GPL-3
-URL: http://www.r-project.org, http://www.stat.osu.edu/~pfc/
+URL: http://www.r-project.org, https://www.stat.osu.edu/~pfc/

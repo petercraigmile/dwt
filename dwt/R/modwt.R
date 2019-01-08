@@ -32,36 +32,38 @@
 
 
 modwt <- function (x, wavelet = "LA8",
-                   nlevels = floor(log2(length(x)))) {
-  ## ======================================================================
-  ## Purpose : Perform a MODWT decomposition of the data 'x' to
-  ##           level 'nlevels' using a given 'wavelet'.
-  ## ======================================================================
-  
-  filter <- dwt.filter(wavelet)
-  
-  js <- 1:nlevels
-  
-  N <- length(x)
-  Nj <- N/2^js
-  L  <- length(filter$scaling)
-  Lj       <- (2^js-1)*(filter$L-1)+1
-  Bj       <- Lj-1
-  Bj[Bj>N] <- N
-  
-  V <- x
-  W <- list(nlevels)
-  
-  for (j in js) {
-    results <- modwt.cascade.next(V, j, filter)
-    V      <- results$V
-    W[[j]] <- results$W
-  }
-  
-  structure(list(x = x, W = W, V = V, nlevels = nlevels, N = N,
-                 Lj=Lj, Mj=N-Lj+1, Bj=Bj,
-                 filter = filter),
-            class = "modwt")
+                   nlevels = floor(log2(length(x))), use.C=TRUE) {
+    
+    ## ======================================================================
+    ## Purpose : Perform a MODWT decomposition of the data 'x' to
+    ##           level 'nlevels' using a given 'wavelet'.
+    ## ======================================================================
+    
+    filter <- dwt.filter(wavelet)
+    
+    js <- 1:nlevels
+    
+    N <- length(x)
+    Nj <- N/2^js
+    L  <- length(filter$scaling)
+    Lj       <- (2^js-1)*(filter$L-1)+1
+    Bj       <- Lj-1
+    Bj[Bj>N] <- N
+    
+    V <- x
+    W <- list(nlevels)
+    
+    for (j in js) {
+        
+        results <- modwt.cascade.next(V, j, filter, use.C)
+        V      <- results$V
+        W[[j]] <- results$W
+    }
+    
+    structure(list(x = x, W = W, V = V, nlevels = nlevels, N = N,
+                   Lj=Lj, Mj=N-Lj+1, Bj=Bj,
+                   filter = filter),
+              class = "modwt")
 }
 
 

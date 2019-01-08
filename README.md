@@ -2,7 +2,10 @@
 
 Email questions about the code to pfc &lt;AT&gt; stat.osu.edu
 
-R routines for carrying out the Discrete Wavelet Transforms (DWT) and Maximum Overlap Discrete Wavelet Transforms (MODWT) for univariate time series.   C code versions are included to speed up calculations.
+R routines for carrying out the Discrete Wavelet Transforms (DWT) and
+Maximum Overlap Discrete Wavelet Transforms (MODWT) for univariate
+time series.   C code versions are included to speed up calculations,
+and are used by defauly.
 
 The R package is contained in the `dwt` folder.
 
@@ -18,7 +21,7 @@ installed.  After installing the `devtools` R package type
 devtools::install_github("dwt", user="petercraigmile", subdir="dwt") 
 ```
 
-For windows, download the file <a href="https://github.com/petercraigmile/dwt/raw/master/releases/0.9/dwt_0.9.zip">dwt_0.9.zip</a> from the `releases` folder.    Then:
+For windows, download the ZIP file <a href="https://github.com/petercraigmile/dwt/raw/master/releases/current">releases</a> folder.    Then:
 
 1. Open the R gui, by doubling clicking on the R icon.
 
@@ -32,9 +35,7 @@ After installation, type `library(dwt)` to use the R library.
 
 ### Issues
 
-1. I need to check the two versions of the MODWT code.
-
-2. The documentation for this R package needs more work.
+1. The documentation for this R package needs more work.
 
 
 ### References:

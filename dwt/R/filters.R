@@ -57,15 +57,19 @@ upsample.by <- function (x, n, before=TRUE) {
   ## If before is TRUE, each value of 'x' occurs befores the zeroes
   ## ======================================================================
 
-  if (before)
-    as.numeric(rbind(x, matrix(0, n, length(x))))
-  else
-    as.numeric(rbind(matrix(0, n, length(x)), x))
+    if (before) {
+        
+        as.numeric(rbind(x, matrix(0, n, length(x))))
+        
+    } else {
+        
+        as.numeric(rbind(matrix(0, n, length(x)), x))
+    }
 }
 
 
 
-periodize.filter <- function (f, n, L=length(filter)) {  
+periodize.filter <- function (f, n, L=length(f)) {
   ## ======================================================================
   ## periodize the filter 'f' of length 'L'
   ## into a vector of length 'n'.
@@ -97,13 +101,13 @@ circularly.filter <- function (x, f, L=length(f)) {
 
 
 
-center.of.energy <- function (f)
+center.of.energy <- function (f) {
   ## ======================================================================
   ## Calculate the center of energy of the filter 'f'
   ## References: Wickerhauser (1994, p.171 and p.341)
   ##             Percival and Walden (2000, p.118)
   ## ======================================================================
-{
+
   f.sq <- f^2
   sum((0:(length(f)-1)) * f.sq) / sum(f.sq)
 }

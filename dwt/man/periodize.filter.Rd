@@ -9,7 +9,7 @@ periodize the filter 'f' of length 'L'
 into a vector of length 'n'.
 }
 \usage{
-periodize.filter(f, n, L = length(filter))
+periodize.filter(f, n, L = length(f))
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
