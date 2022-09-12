@@ -14,20 +14,11 @@ The R package is contained in the `dwt` folder.
 
 ### Installation
 
-For Mac OS and Linux, make sure you have the C compilers
-installed.  After installing the `devtools` R package type
+Please make sure you have a C compiler installed for your version of R. Then, after installing the devtools R package, you can install this R package using
 
 ```
-devtools::install_github("dwt", user="petercraigmile", subdir="dwt") 
+devtools::install_github("petercraigmile/dwt/dwt") 
 ```
-
-For windows, download the ZIP file <a href="https://github.com/petercraigmile/dwt/raw/master/releases/current">releases</a> folder.    Then:
-
-1. Open the R gui, by doubling clicking on the R icon.
-
-2. Click on the `Packages` menu and select `Install package(s) from local zip files...`.  Find the zip file and press `Open`.
-
-3. Your R package will be installed.
 
 After installation, type `library(dwt)` to use the R library.
 
@@ -35,7 +26,9 @@ After installation, type `library(dwt)` to use the R library.
 
 ### Issues
 
-1. The documentation for this R package needs more work.
+1. The plot command is not working.
+
+2. The documentation for this R package needs more work.
 
 
 ### References:
